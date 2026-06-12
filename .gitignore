@@ -16,30 +16,32 @@ htmlcov/
 # Env / secrets
 .env
 .env.*
+!.env.example
 *.local
 
 # Frontend
 node_modules/
 .next/
+out/
 .vite/
+.vercel/
 coverage/
+*.tsbuildinfo
+.eslintcache
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# LeRobot / data
-data/
-outputs/
+# Large model artifacts (store separately or with Git LFS)
 *.safetensors
 *.ckpt
-calibration/
+
+# Disposable runtime logs
+outputs/server.log
 
 # OS / editor
 .DS_Store
 .idea/
 .vscode/
 *.swp
-assets/
-!cygnus/assets/
-!cygnus/assets/**
